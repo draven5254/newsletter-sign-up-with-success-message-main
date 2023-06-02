@@ -1,0 +1,299 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Tomato: hsl(4, 100%, 67%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("ttf"),
+    url("../assets/fonts/Roboto-Regular.ttf") format("ttf");
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* .container {
+  display: none;
+} */
+
+.img-box img {
+  width: 100%;
+}
+
+.sign-up-form {
+  padding: 2.5rem 2rem;
+}
+
+.sign-up-form p {
+  font-size: 1.5rem;
+  color: var(--Charcoal-Grey);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.sign-up-form h1 {
+  font-size: 3rem;
+  color: var(--Dark-Slate-Grey);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.sign-list {
+  margin-top: 5rem;
+}
+
+.sign-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.sign-item img {
+  margin-right: 1rem;
+}
+
+.sign-item p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Charcoal-Grey);
+}
+
+.sign-item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.form-container {
+  max-width: 40rem;
+  padding: 2.5rem 2rem;
+  border-radius: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+input[type="email"] {
+  padding: 20px;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Grey);
+}
+
+button {
+  padding: 20px;
+  background-color: var(--Charcoal-Grey);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.5rem;
+  box-shadow: 0 0.5rem 0.5rem var(--Dark-Slate-Grey);
+}
+
+button:hover {
+  background: linear-gradient(to right, hsl(346, 100%, 66%), hsl(8, 100%, 65%));
+  box-shadow: 0 0.2rem 0.5rem var(--Tomato);
+}
+
+.error-message {
+  color: red;
+  position: relative;
+  top: -10rem;
+  display: none;
+  right: -18rem;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:invalid + .error-message {
+  display: block;
+}
+
+/* CONFIRMATION EMAIL */
+
+.confirm-box {
+  background-color: var(--White);
+  height: 100%;
+  padding: 2.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.confirm-content button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-content img {
+  margin: 10rem 0 2.5rem 0;
+}
+
+.confirm-content h1 {
+  font-size: 3.5rem;
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 2.5rem;
+}
+
+.confirm-content p {
+  font-size: 1.5rem;
+  color: var(--Charcoal-Grey);
+  margin-bottom: 20rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#email-add {
+  color: var(--Dark-Slate-Grey);
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1020px) {
+  .confirm-box {
+    position: relative;
+    background-color: var(--Dark-Slate-Grey);
+    height: 100vh;
+  }
+
+  .confirm-content {
+    background-color: var(--White);
+    position: absolute;
+    max-width: 45rem;
+    padding: 5rem;
+    border-radius: 3rem;
+  }
+
+  .confirm-content img {
+    margin: 0;
+    padding-bottom: 3rem;
+    width: 5rem;
+  }
+
+  .confirm-content h1,
+  .confirm-content p {
+    margin: 0;
+    padding-bottom: 3rem;
+  }
+
+  .confirm-content p {
+    line-height: 2.5rem;
+  }
+
+  .confirm-content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 4.3rem;
+  }
+
+  /* .confirm-content p {
+    font-size: rem;
+  } */
+
+  .container {
+    background-color: var(--Dark-Slate-Grey);
+    position: relative;
+    height: 100vh;
+  }
+
+  .container-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    width: 85rem;
+    padding: 2.5rem;
+    border-radius: 2rem;
+  }
+
+  .sign-up-form h1 {
+    font-size: 5rem;
+  }
+
+  .sign-up-form p {
+    margin-bottom: 1.5rem;
+  }
+
+  .sign-up-form h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .sign-list {
+    margin-top: 2.5rem;
+  }
+
+  .sign-item p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--Charcoal-Grey);
+  }
+
+  .sign-item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  .sign-up-form {
+    padding: 0rem 2rem;
+    max-width: 40rem;
+    height: 25rem;
+    margin-right: 3rem;
+  }
+
+  .img-box img {
+    height: 500px;
+  }
+
+  .error-message {
+    top: -9rem;
+    right: -27rem;
+  }
+}
